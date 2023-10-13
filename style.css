@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    /* height: 100vh; */
+    background-image: url(./assets/green-grass.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.top{
+    height: 25vh;
+    border-radius: 0px 0px 60px 60px;
+    background-color: rgba(127, 180, 116);
+    box-shadow: 0px 0px 37px -3px rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.top textarea{
+    border-radius: 20px;
+    border: 1px dashed black;
+    outline: none;
+    padding: 1rem;
+    position: absolute;
+    box-shadow: 15px 14px 0px -2px rgb(66, 66, 66);
+}
+.noteContainer{
+    height: 200px;
+    width: 35rem;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -80px;
+}
+.colorContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.colorContainer img{
+    width: 5rem;
+    border-radius: 50%;
+}
+.colorContainer input{
+    width: 4rem;
+    height: 2rem;
+    padding: 0;
+    padding: 2px;
+    border-radius: 20px;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+button{
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 30px;
+  justify-content: center;
+  overflow: hidden;
+  padding-left: 8px;
+  padding-right: 8px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+button:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+button:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+h1{
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    color: white;
+    font-family: "JetBrains Mono",monospace;
+    text-shadow: 5px 5px 10px black;
+    text-decoration: underline;
+}
+.notes{
+    border: 2px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+    margin: 5rem 0 0 0 ;
+}
+.note{
+    width: 300px;
+    border-radius: 15px;
+    padding: 1rem;
+    background-color: white;
+    border: 1px dashed black;
+}
+.note button{
+    float: right;
+    margin: 1rem;
+    background-color: rgba(255, 0, 0, 0.63);
+    color: black;
+}
