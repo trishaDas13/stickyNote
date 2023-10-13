@@ -17,8 +17,8 @@ addNote.addEventListener('click', (e) => {
     }
     let notes = document.createElement('div');
     notes.innerHTML = `
-        <div class="note" color='bg'>
-            <p>
+        <div class="note">
+            <p class= "para">
                 ${text}
             </p>
             <button btn='del'>Delete</button>
@@ -26,6 +26,20 @@ addNote.addEventListener('click', (e) => {
     `
     notes.classList.add('.note');
     notesContainer.appendChild(notes);
+
+    let stickyNoteContent = document.querySelectorAll('.note p');
+    stickyNoteContent.forEach((eachNote) => {
+        eachNote.style.backgroundColor= color.value;
+    });
+
+    let stickyNote = document.querySelectorAll('.note');
+    stickyNote.forEach((eachNote) => {
+        eachNote.style.backgroundColor= color.value;
+    });
+
+
+
+    
     textArea.value = "";
 
      //todo ---------- to delete the notes ----------
@@ -39,17 +53,4 @@ addNote.addEventListener('click', (e) => {
         
     });   
 
-});
-
-//todo ---------- to color the notes ---------- 
-color.addEventListener('change', function(e){
-    // e.preventDefault();
-    let stickyNote = document.querySelectorAll('.note');
-    console.log(stickyNote);
-
-    stickyNote.forEach((eachNote) => {
-        let bgcolor = e.target.value;
-        eachNote.style.backgroundColor = bgcolor;
-        console.log(eachNote);
-    });
 });
